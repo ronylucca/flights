@@ -1,0 +1,15 @@
+#dependence
+/node_modules/
+
+#log
+src/log/*
+npm-debug.log
+!src/log/.keep
+
+#out
+.nyc_output/
+dist/
+
+#ide
+.vscode
+.DS_Store

@@ -1,0 +1,55 @@
+{
+  "name": "flights",
+  "version": "1.0.0",
+  "description": "A simple Shy API Rest Node Project",
+  "main": "index.js",
+
+  "scripts": {
+    "start": "babel-node src",
+    "test": "nyc mocha test/**/*.spec.js -t 10000 --verbose --compilers js:babel-register || true",
+    "build": "babel src -d dist",
+    "server": "SET NODE_ENV=production && node dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronylucca/flights.git"
+  },
+  "author": "Rony de Lucca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronylucca/flights/issues"
+  },
+  "homepage": "https://github.com/ronylucca/flights#readme",
+
+  "dependencies": {
+    "aws-api-gateway-client": "^0.2.17",
+    "aws-sdk": "^2.451.0",
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.4",
+    "express": "^4.17.0",
+    "express-joi-validation": "^0.2.1",
+    "joi": "^14.3.1",
+    "log4js": "^4.1.0",
+    "log4js-json": "^0.2.0",
+    "log4js-json-layout": "^1.0.5",
+    "moment": "^2.24.0",
+    "request": "^2.88.0",
+    "tiny-json-http": "^7.0.0",
+    "utf8": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.0",
+    "sinon": "^6.0.1",
+    "supertest": "^3.1.0"
+  }
+}
