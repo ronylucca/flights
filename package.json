@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A simple Shy API Rest Node Project",
   "main": "index.js",
-
   "scripts": {
     "start": "babel-node src",
     "test": "nyc mocha test/**/*.spec.js -t 10000 --verbose --compilers js:babel-register || true",
@@ -20,7 +19,6 @@
     "url": "https://github.com/ronylucca/flights/issues"
   },
   "homepage": "https://github.com/ronylucca/flights#readme",
-
   "dependencies": {
     "aws-api-gateway-client": "^0.2.17",
     "aws-sdk": "^2.451.0",

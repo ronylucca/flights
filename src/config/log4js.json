@@ -1,0 +1,7 @@
+{
+    "appenders" : { 
+                  "applog" : { "type": "dateFile", "filename": "./src/log/app.log" },
+                  "out"    : { "type": "console" }
+                  },
+    "categories": { "default": { "appenders": [ "applog", "out" ], "level": "trace" } }
+}
