@@ -5,7 +5,7 @@ const bodyParser = require ('body-parser');
 const log4js     = require ('log4js');
 
 
-//Properties are taken from env vars. If not, default values are set.
+//Properties are taken throught env vars. If not, default values are set.
 const port = process.env.PORT || 8081;
 
 global.Property = {
