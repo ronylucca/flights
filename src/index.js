@@ -4,12 +4,15 @@ const consign    = require ('consign');
 const bodyParser = require ('body-parser');
 const log4js     = require ('log4js');
 
+
+//Properties are taken from env vars. If not, default values are set.
 const port = process.env.PORT || 8081;
 
 global.Property = {
     URL_PATH_DYNAMO: process.env.DynamoDBEndPoint || "http://localhost:8000",
     REGION  : process.env.DynamoDBRegion || "us-east-1",
-    TABLE : process.env.DynamoDBTable || "flights"
+    TABLE : process.env.DynamoDBTable || "flights",
+    SOURCE_FILE : process.env.FlightsSourceFile || "/tmp/BrFlights2.csv"
 }
 
 const app = express();
@@ -49,6 +52,8 @@ consign({
                 logger.error (`Failed to listen on port ${port}.`);
                 return process.exit (1);
             }
+        // Using migrate on node   
+        //migrateService.migrateFromSourceFile(Property.SOURCE_FILE)
         return logger.info(`Listening on port ${port}.`);
         }
     );

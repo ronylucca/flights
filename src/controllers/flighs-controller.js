@@ -40,7 +40,7 @@ exports.searchFlights = async (req, res) => {
     try{
         Logger.info("Searching for a flight")
         const response  = await flightsService.searchFlightWithParams(req.params)
-        return res.status(response.statusCode).send(response.body)
+        return res.status(200).send(response)
 
     }catch(error){
         Logger.error("An erorr occurred during the process", error)

@@ -26,6 +26,10 @@ async saveAndUpdate(flight) {
     })
 }
 
+/*
+* Method used for search for flights. This method is also ready for auto-complete, 
+* once we are using 'begins_with'
+*/
 async seachFlights(filter) {
 
     return new Promise((resolve, reject) => {
@@ -35,12 +39,12 @@ async seachFlights(filter) {
       const searchingParameters = {
         TableName: tableFlights,
         KeyConditionExpression: "particao = :partition",
-        FilterExpression: "from = :from and to = :to and and begins_with (departure, :departure)",
+        FilterExpression: "begins_with (origin, :origin) and begins_with(destination, :destination) and begins_with (departure, :departure)",
         ExpressionAttributeValues: {
           ":partition": partition,
           ":departure": filter.departure,
-          ":from": filter.from,
-          ":to": filter.to
+          ":origin": this.capitalize(filter.from),
+          ":destination": this.capitalize(filter.to)
         }
       }
 
@@ -55,4 +59,12 @@ async seachFlights(filter) {
       })
     })
   }
+
+  capitalize(text) {
+    if (typeof text !== 'string') return ''
+    var capitalized = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+    return capitalized;
+  }
+
+  
 }

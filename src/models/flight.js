@@ -10,8 +10,8 @@ module.exports = class Flight {
         this.flightTB = {
             TableName: flightTables,
             Item: {
-                "from": flightObject.from,
-                "to": flightObject.to,
+                "origin": flightObject.from,
+                "destination": flightObject.to,
                 "company": flightObject.company,
                 "particao": "flights",
                 "identificador" : identifier,
