@@ -20,12 +20,11 @@ to migrate data from csv file, run /src/data/migrate_data.py
   
   
   to POST a flight follow the pattern:
-  
+ ``` 
   {
     "from": "Rio De Janeiro",
     "to": "Miami",
     "company": "AMERICAN AIRLINES",
     "departure" : "2016-01-10T02:38:00Z"
   }
- 
- 
+  ```
