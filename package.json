@@ -21,7 +21,7 @@
   "homepage": "https://github.com/ronylucca/flights#readme",
   "dependencies": {
     "aws-api-gateway-client": "^0.2.17",
-    "aws-sdk": "^2.451.0",
+    "aws-sdk": "^2.814.0",
     "body-parser": "^1.19.0",
     "consign": "^0.1.6",
     "cors": "^2.8.4",
