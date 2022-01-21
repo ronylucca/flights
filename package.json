@@ -28,7 +28,7 @@
     "express": "^4.17.0",
     "express-joi-validation": "^0.2.1",
     "joi": "^14.3.1",
-    "log4js": "^4.1.0",
+    "log4js": "^6.4.0",
     "log4js-json": "^0.2.0",
     "log4js-json-layout": "^1.0.5",
     "moment": "^2.24.0",
