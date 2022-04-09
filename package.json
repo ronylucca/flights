@@ -31,7 +31,7 @@
     "log4js": "^4.1.0",
     "log4js-json": "^0.2.0",
     "log4js-json-layout": "^1.0.5",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "request": "^2.88.0",
     "tiny-json-http": "^7.0.0",
     "utf8": "^3.0.0"
